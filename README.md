@@ -4,7 +4,7 @@
 The objective of this anlysis is to examine the affect of multiple economic indicies on the unemployment rate in the US. The unemployment rate will be the dependent variable for this analysis whereas the following variables will serve as the independent variables; Gross Domestic Product (GDP), Producer Price Index (PPI), Consumer Price Index (CPI), Federal Fund Rate, and the National Interest Rate. The machine leaning technique this analysis will employ will consist of a linear regression to explore the relationship between the selected indicies and the dependent variable.   
 
 ## Data Sources:
-For this analysis, we have 7 different Excel datasets, three XLSX files and four CSV files. A CSV file is for Federal Funds Interest Rate and a XLSX file is for Unemployment Rate. The additional five files represent factors that we want to analysis in relation to the Federal Funds Interest Rate and Unemployment Rate. This includes Consumer Price Index, Gross Domestic Product Growth Rate, Gross Domestic Product Per Capita, Inflation Rate, and Income.
+For this analysis, we have 6 different CSV datasets. Each dataset represents a factor that we want to analyze in relation to the Unemployment Rate. This includes CPI, PPI, GDP, Inflation Rate, and the Federal Fund Rate.
 
 ## Data Tools: 
 Python, SQL, Supervised Machine Learning, Tableau, Jupyter Notebook
