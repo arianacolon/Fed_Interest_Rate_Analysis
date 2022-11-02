@@ -8,8 +8,11 @@ For this analysis, we have 6 different CSV datasets. Each dataset represents a f
 
 ## Team Roles and Responsibilities
 Ariana Colon : Creation of the Repository in GitHub
+
 Martin Fonseca: Mockup Database and ERD
+
 Helen Garcia: Mockup Database (PostgreSQL)
+
 Adrian Maple: Technology
 
 
