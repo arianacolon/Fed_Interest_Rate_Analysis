@@ -6,13 +6,20 @@ The objective of this anlysis is to examine the affect of multiple economic indi
 ## Data Sources:
 For this analysis, we have 6 different CSV datasets. Each dataset represents a factor that we want to analyze in relation to the Unemployment Rate. This includes CPI, PPI, GDP, Inflation Rate, and the Federal Fund Rate.
 
+## Team Roles and Responsibilities
+Ariana Colon : Creation of the Repository in GitHub
+Martin Fonseca: Mockup Database and ERD
+Helen Garcia: Mockup Database (PostgreSQL)
+Adrian Maple: Technology
+
+
 We are using PgAdmin SQL to create our database. The database was created with the tables from each csv file and joined into a new table called Unemployment_table seen below.
 
 ![Screen Shot 2022-11-02 at 7 26 27 PM](https://user-images.githubusercontent.com/107590196/199621018-86c851d5-8eb9-49e1-8078-5c65c73f5bcf.png)
 
 
 
-## Data!
+## Data
  Tools: 
 Python, SQL, Supervised Machine Learning, Tableau, Jupyter Notebook
 
