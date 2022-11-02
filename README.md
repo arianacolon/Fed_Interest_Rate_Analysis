@@ -15,6 +15,8 @@ Helen Garcia: Mockup Database (PostgreSQL)
 
 Adrian Maple: Technology
 
+David Fleming: Machine Learning Model
+
 
 We are using PgAdmin SQL to create our database. The database was created with the tables from each csv file and joined into a new table called Unemployment_table seen below.
 
