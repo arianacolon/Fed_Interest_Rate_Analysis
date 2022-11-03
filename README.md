@@ -18,11 +18,6 @@ Adrian Maple: Technology
 David Fleming: Machine Learning Model
 
 
-We are using PgAdmin SQL to create our database. The database was created with the tables from each csv file and joined into a new table called Unemployment_table seen below.
-
-![Screen Shot 2022-11-02 at 7 26 27 PM](https://user-images.githubusercontent.com/107590196/199621018-86c851d5-8eb9-49e1-8078-5c65c73f5bcf.png)
-
-
 
 ## Data
 Tools: 
