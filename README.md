@@ -21,9 +21,15 @@ David Fleming: Machine Learning Model
 
 ## Data
 Tools: 
-Python, SQL, Supervised Machine Learning, Tableau, Jupyter NotebookWe 
+Python, SQL, Supervised Machine Learning, Tableau, Jupyter Notebook
 
-are using PgAdmin SQL to create our database. The database was created with the tables from each csv file and joined into a new table called Unemployment_table seen below.
+We mapped our data, which can is shown in the ERD below:
+
+![ERDNEW](https://user-images.githubusercontent.com/108022219/199629591-831249d7-e8e6-4d46-8c64-de55ae7df61b.png)
+
+
+
+We are using PgAdmin SQL to create our database. The database was created with the tables from each csv file and joined into a new table called Unemployment_table seen below.
 
 ![Screen Shot 2022-11-02 at 7 26 27 PM](https://user-images.githubusercontent.com/107590196/199621018-86c851d5-8eb9-49e1-8078-5c65c73f5bcf.png)
 
