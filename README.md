@@ -49,3 +49,13 @@ Unemployment in America has been volatile in the US over the past 20 years. Majo
 ## Questions We Want Answered
 1. Which indicies had the largest impact on the Unemployment Rate over the past 20 years?
 2. What is the measured change of each index over the stated time period? 
+
+## Machine Learning Model Requirements
+* Preliminary Data Preprocessing
+    * For MultipleLinearRegression, preliminary data preprocessing begins with making sure our data from our PostgresSQL database table that is loaded into a dataframe and is all in numerical values. Because the date column was not initially a numerical value, we formatted its data type into an integer. The next step was to scale the unemployment dataframe from 0 to 1 with the MinMaxScaler module. Once scaled, the features set and target set from the unemployment database are defined . The features set entails the following columns: GDP, PPI, Inflation_Rate, CPI, Interest Rates. The target set is the unemployment_rate column.
+* Preliminary Feature Engineering & Preliminary Feature Selection
+    * Because our data contains continuous variables from 2001 to 2021, we decided to use Multiple Linear Regression. This feature selection takes in a set of factors and attempts to learn their patterns on a specific value, in this case, unemployment rate.
+* How Data was Split
+    * The data was split into training and testing sets before it was fit for MultipleLinearRegression with 75% of the data being for training and the other 25% was testing.
+* Limitations and Benefits
+    * A benefit of Multiple Linear Regression is if new data feature points are added, Linear Regression can be used to predict the result of unemployment rate. A limitation is it might present how there is no relationship with the data if there is no linear slope.
