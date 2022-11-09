@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(61, 243, 228);
+   }
+   .jumbotron {
+     background-image: url("https://img.freepik.com/premium-photo/stock-market-forex-trading-graph-graphic-double-exposure_73426-193.jpg?w=826")
+   }
+   #header.jumbotron {
+     color: #2f2dbe !important;
+   }
+   h1 {
+     background-color:rgb(255, 255, 255);
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+   }
+   h2 {
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-size: x-large;
+     margin-top: 0;
+     
+   
+   }
+   #bar {
+     border-radius: 25px !important;
+    
+   }
+   
+   #bubblebox, #culturebox, #marginbox {
+     padding: 4px;
+     background-color: white;
+     border: 1px solid #60797f;
+     border-radius: 10px !important;
+     margin-bottom: 15px;
+   }
+   
+   
+   .well {
+     border: 1px solid #60797f;
+   }
+   
+   .center{
+     text-align: center !important;
+   }
+   
+   #footer {
+     background-color:rgba(97, 79, 87, 0.4);
+     border-radius: 5px !important;
+     padding: 20px;
+   }
+   
+   #footer a {color: #444;}
+   
