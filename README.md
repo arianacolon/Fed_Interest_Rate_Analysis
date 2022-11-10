@@ -22,7 +22,7 @@ Martin Fonseca: Dashboard
 
 ## Data
 Tools: 
-Python, SQL, Supervised Machine Learning, Tableau, Jupyter Notebook
+Python, SQL, Supervised Machine Learning, Javascript, Jupyter Notebook
 
 We mapped our data, which can is shown in the ERD below:
 
