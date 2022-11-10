@@ -7,17 +7,13 @@ The objective of this anlysis is to examine the affect of multiple economic indi
 For this analysis, we have 6 different CSV datasets. Each dataset represents a factor that we want to analyze in relation to the Unemployment Rate. This includes CPI, PPI, GDP, Inflation Rate, and the Federal Fund Rate.
 
 ## Team Roles and Responsibilities
-Ariana Colon : Creation of the Repository in GitHub
 
-Martin Fonseca: Mockup Database and ERD
-
+Adrian Maple: GitHub
+David Fleming: Presentation
+Ariana Colon : Machine Learning Model
 Helen Garcia: Mockup Database (PostgreSQL)
-
-Adrian Maple: Technology
-
-David Fleming: Machine Learning Model
-
-
+Adrian Maple: Dashboard
+Martin Fonseca: Dashboard
 
 ## Data
 Tools: 
