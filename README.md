@@ -63,3 +63,6 @@ Unemployment in America has been volatile in the US over the past 20 years. Majo
     * The data was split into training and testing sets before it was fit for MultipleLinearRegression with 75% of the data being for training and the other 25% was testing.
 * Limitations and Benefits
     * A benefit of Multiple Linear Regression is if new data feature points are added, Linear Regression can be used to predict the result of unemployment rate. A limitation is it might present how there is no relationship with the data if there is no linear slope.
+
+Link to Google Slides
+https://docs.google.com/presentation/d/1lzQ-b4w2ID-vXFYUGq4Te_y_GC6d6SaXZiabudDA7Ns/edit?usp=sharing
