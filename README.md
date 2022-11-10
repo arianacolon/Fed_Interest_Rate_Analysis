@@ -9,10 +9,15 @@ For this analysis, we have 6 different CSV datasets. Each dataset represents a f
 ## Team Roles and Responsibilities
 
 Adrian Maple: GitHub
+
 David Fleming: Presentation
+
 Ariana Colon : Machine Learning Model
+
 Helen Garcia: Mockup Database (PostgreSQL)
+
 Adrian Maple: Dashboard
+
 Martin Fonseca: Dashboard
 
 ## Data
