@@ -29,7 +29,10 @@ We mapped our data, which can is shown in the ERD below:
 
 
 
-We are using PgAdmin SQL to create our database. The database was created with the tables from each csv file and joined into a new table called Unemployment_table seen below.
+We are using PgAdmin SQL to create our database. The database was created with 6 tables from each csv file and joined into a new table called Unemployment_table seen below. We used the code below to join 6 tables by using 5 left joins.
+
+<img width="520" alt="Screen Shot 2022-11-09 at 7 16 20 PM" src="https://user-images.githubusercontent.com/107590196/200969479-204a8aeb-f9e7-4ace-affd-03d9e3a7a0d9.png">
+
 
 ![Screen Shot 2022-11-02 at 7 26 27 PM](https://user-images.githubusercontent.com/107590196/199621018-86c851d5-8eb9-49e1-8078-5c65c73f5bcf.png)
 
@@ -52,7 +55,7 @@ Unemployment in America has been volatile in the US over the past 20 years. Majo
 
 ## Machine Learning Model Requirements
 * Preliminary Data Preprocessing
-    * For MultipleLinearRegression, preliminary data preprocessing begins with making sure our data from our PostgresSQL database table that is loaded into a dataframe and is all in numerical values. Because the date column was not initially a numerical value, we formatted its data type into an integer. The next step was to scale the unemployment dataframe from 0 to 1 with the MinMaxScaler module. Once scaled, the features set and target set from the unemployment database are defined . The features set entails the following columns: GDP, PPI, Inflation_Rate, CPI, Interest Rates. The target set is the unemployment_rate column.
+    * For MultipleLinearRegression, preliminary data preprocessing begins with making sure our data from our PostgresSQL database table that is loaded into a dataframe and is all in numerical values. Because the date column was not initially a numerical value, we formatted its data type into an integer. The next step was to scale the unemployment dataframe from 0 to 1 with the MinMaxScaler module. Once scaled, the features set and target set from the unemployment database are defined. The features set entails the following columns: GDP, PPI, Inflation_Rate, CPI, Interest Rates. The target set is the unemployment_rate column.
 * Preliminary Feature Engineering & Preliminary Feature Selection
     * Because our data contains continuous variables from 2001 to 2021, we decided to use Multiple Linear Regression. This feature selection takes in a set of factors and attempts to learn their patterns on a specific value, in this case, unemployment rate.
 * How Data was Split
