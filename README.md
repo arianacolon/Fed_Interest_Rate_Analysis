@@ -56,7 +56,7 @@ Unemployment in America has been volatile in the US over the past 20 years. Majo
 
 ## Machine Learning Model Requirements
 * Preliminary Data Preprocessing
-    * For MultipleLinearRegression, preliminary data preprocessing begins with making sure our data from our PostgresSQL database table that is loaded into a dataframe and is all in numerical values. Because the date column was not initially a numerical value, we formatted its data type into an integer. The next step was to scale the unemployment dataframe from 0 to 1 with the MinMaxScaler module. Once scaled, the features set and target set from the unemployment database are defined. The features set entails the following columns: GDP, PPI, Inflation_Rate, CPI, Interest Rates. The target set is the unemployment_rate column.
+    * For MultipleLinearRegression, preliminary data preprocessing begins with making sure our data from our PostgresSQL database table is loaded into a dataframe and is all in numerical values. Because the date column was not initially a numerical value, we formatted its data type into an integer. The next step was to scale the unemployment dataframe from 0 to 1 with the MinMaxScaler module. Once scaled, the features set and target set from the unemployment database are defined. The features set entails the following columns: GDP, PPI, Inflation_Rate, CPI, Interest Rates. The target set is the unemployment_rate column.
 * Preliminary Feature Engineering & Preliminary Feature Selection
     * Because our data contains continuous variables from 2001 to 2021, we decided to use Multiple Linear Regression. This feature selection takes in a set of factors and attempts to learn their patterns on a specific value, in this case, unemployment rate.
 * How Data was Split
