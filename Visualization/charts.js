@@ -36,7 +36,7 @@ function buildMetadata(ddates) {
   d3.json("unemployment_data.json").then((data) => {
     var metadata = data.metadata;
     // Filter the data for the object with the desired date
-    var resultArray = metadata.filter(datesObj => datesObj.id == ddates);
+    var resultArray = metadata.filter(metaObj => metaObj.id == ddates);
     var result = resultArray[0];
     // Use d3 to select the panel with id of `#date-metadata`
     var PANEL = d3.select("#date-metadata");
@@ -54,33 +54,35 @@ function buildMetadata(ddates) {
   });
 }
 
-//--------------- Build Bar and Bubble Charts---------
+//--------------- Build Bar Chart---------
 // Create the buildCharts function.
 function buildMetadata(ddates) {
 
 // Use d3.json to load and retrieve the unemployment_data.json file 
 d3.json("unemployment_data.json").then((data) => {
 
-// Create a variable that holds the unemployment rates array.
-var ue_rates = data.unemployment;
-  
-// Create a variable that filter the unemployment and metadata for the object with the desired date.
-var chartArray = ue_rates.filter(chartObj => chartObj.id == ddates);
+// Create a variable that holds each index
+var metadata = data.metadata;
+
+// Create a variable that filters the metadata for the object with the desired date.
 var chartArray = metadata.filter(chartObj => chartObj.id == ddates);
-  
+
 // Create a variable that holds the first sample in the array.
 var chartResult = chartArray[0];
-var meta_values= chartResult.metadata;
+
+// 6. Create variables that hold the unemployment data.
+var ue_rates = chartResult.unemployment;
+var names = chartResult.names;
   
 //---------------- Bar Chart ------------------
-// Create the yticks for the bar chart.   
-    var yticks =  ue_rates.map(ue_rates => `rates ${ue_rates}`);
+// Create the yticks for the bar chart.  
+var yticks = ue_rates.map(ue_rates => `rates ${ue_rates}`);
 
     //Create the trace for the bar chart. 
     var barData = [{
-      x: names,
+      x: metadata,
       y: yticks,
-      text: yticks.map(row => meta_values),
+      text: yticks.map(row => names),
       type: "bar",
       orientation: "h"}
     ];
@@ -97,35 +99,6 @@ var meta_values= chartResult.metadata;
     };
     // Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
-
-
-    //---------------- Deliverable 2 Bubble Chart ------------------
-    // Create the trace for the bubble chart.
-    var bubbleData = [{
-      x: names,
-      y: metadata,
-      text: otu_labels,
-      mode: 'markers',
-      marker: {
-        size: meta_values,
-        sizeref: 0.04,
-        sizemode: 'area',
-        color: otu_ids,
-        colorscale: "Earth"
-      }
-    }];
-    // Create the layout for the bubble chart.
-    var bubbleLayout = {
-          title: "Rates per Indicies",
-          xaxis: {
-            title: {
-              text: "rate"}},
-          hovermode: 'closest',
-          height: 600,
-          width: 1100
-    };
-    // Use Plotly to plot the data with the layout.
-    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
   });
 
 }
