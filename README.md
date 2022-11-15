@@ -50,15 +50,18 @@ Unemployment in America has been volatile in the US over the past 20 years. Majo
 2. What is the measured change of each index over the stated time period? 
 
 ## Machine Learning Model Requirements
-* Preliminary Data Preprocessing
+* Data Preprocessing
     * For MultipleLinearRegression, preliminary data preprocessing begins with making sure our data from our PostgresSQL database table is loaded into a dataframe and is all in numerical values. Because the date column was not initially a numerical value, we formatted its data type into an integer. The next step was to scale the unemployment dataframe from 0 to 1 with the MinMaxScaler module. Once scaled, the features set and target set from the unemployment database are defined. The features set entails the following columns: GDP, PPI, Inflation_Rate, CPI, Interest Rates. The target set is the unemployment_rate column.
-* Preliminary Feature Engineering & Preliminary Feature Selection
+* Feature Engineering/Selection & Model Choice Explanation
     * Because our data contains continuous variables from 2001 to 2021, we decided to use Multiple Linear Regression. This feature selection takes in a set of factors and attempts to learn their patterns on a specific value, in this case, unemployment rate.
 * How Data was Split
     * The data was split into training and testing sets before it was fit for MultipleLinearRegression with 75% of the data being for training and the other 25% was testing.
 * Limitations and Benefits
     * A benefit of Multiple Linear Regression is if new data feature points are added, Linear Regression can be used to predict the result of unemployment rate. A limitation is it might present how there is no relationship with the data if there is no linear slope.
-
+* Model Changes/How Model has been Trained
+   * A change we made to the model was plotting scatter plots that include the linear regression equation instead of scatter plots with only data points. This change allows us to highlight the specific relationships each independent variable has on the unemployment rate. A second change we made to the model is graphing the relationship between CDP and CPI because their individual graphs against unemployment rate were similar. Their graph together displayed a linear relationship among these two features. Since we only have numerical data, we decided to try a KMeans machine learning model and see how the 3 PCA components would be clustered together. After this attempt, we decided to stick to Linear Regression mdoel since the main questions we want answered require a machine learning model for continuous data. 
+* Regression Score
+   * The model produced a R2 value of 0.6828, indicating our model explains about 68% of the variation between the variables.
 ## Link to Google Slides
 
 https://docs.google.com/presentation/d/1lzQ-b4w2ID-vXFYUGq4Te_y_GC6d6SaXZiabudDA7Ns/edit?usp=sharing
