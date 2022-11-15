@@ -25,12 +25,13 @@ function init() {
 // Initialize the dashboard
 init();
   
-function optiondChanged(newDate) {
+function optionChanged(newDate) {
   // Fetch new data each time a new date is selected
   buildMetadata(newDate);
   buildCharts(newDate);
     
 }
+
 // Economics Panel 
 function buildMetadata(ddates) {
   d3.json("unemployment_data.json").then((data) => {
@@ -56,33 +57,32 @@ function buildMetadata(ddates) {
 
 //--------------- Build Bar Chart---------
 // Create the buildCharts function.
-function buildMetadata(ddates) {
+function buildCharts(ddates) {
 
 // Use d3.json to load and retrieve the unemployment_data.json file 
 d3.json("unemployment_data.json").then((data) => {
 
 // Create a variable that holds each index
 var metadata = data.metadata;
-
+var unemployment = data.unemployment
 // Create a variable that filters the metadata for the object with the desired date.
 var chartArray = metadata.filter(chartObj => chartObj.id == ddates);
 
 // Create a variable that holds the first sample in the array.
 var chartResult = chartArray[0];
 
-// 6. Create variables that hold the unemployment data.
-var ue_rates = chartResult.unemployment;
-var names = chartResult.names;
+// 6. Create variables that hold the chartResults data.
+var ddates = chartResult.metadata;
+
   
 //---------------- Bar Chart ------------------
 // Create the yticks for the bar chart.  
-var yticks = ue_rates.map(ue_rates => `rates ${ue_rates}`);
+var yticks = unemployment
 
     //Create the trace for the bar chart. 
     var barData = [{
       x: metadata,
       y: yticks,
-      text: yticks.map(row => names),
       type: "bar",
       orientation: "h"}
     ];
