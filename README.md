@@ -8,13 +8,13 @@ For this analysis, we have 6 different CSV datasets. Each dataset represents a f
 
 ## Team Roles and Responsibilities
 
-Adrian Maple: GitHub
+
 
 David Fleming: Presentation
 
 Ariana Colon : Machine Learning Model
 
-Helen Garcia: Mockup Database (PostgreSQL)
+Helen Garcia: GitHub
 
 Adrian Maple: Dashboard
 
@@ -22,7 +22,7 @@ Martin Fonseca: Dashboard
 
 ## Data
 Tools: 
-Python, SQL, Supervised Machine Learning, Javascript, Jupyter Notebook
+Python, SQL, Supervised Machine Learning, Javascript, Jupyter Notebook, HTML, JavaScript, CSS
 
 We mapped our data, which can is shown in the ERD below:
 
