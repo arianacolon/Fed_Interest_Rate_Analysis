@@ -24,7 +24,7 @@ body {
 
  }
 
- #images, #Indexbox, #marginbox {
+ #images, #chartbox1, #chartbox2, #chartbox3, #marginbox {
    padding: 4px;
    background-color: white;
    border: 1px solid #60797f;

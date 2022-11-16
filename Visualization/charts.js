@@ -25,12 +25,13 @@ function init() {
 // Initialize the dashboard
 init();
   
-function optiondChanged(newDate) {
+function optionChanged(newDate) {
   // Fetch new data each time a new date is selected
   buildMetadata(newDate);
   buildCharts(newDate);
     
 }
+
 // Economics Panel 
 function buildMetadata(ddates) {
   d3.json("unemployment_data.json").then((data) => {
@@ -49,40 +50,46 @@ function buildMetadata(ddates) {
     // tags for each key-value in the metadata.
     Object.entries(result).forEach(([key, value]) => {
       PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
-    });
-
   });
+
+});
 }
 
 //--------------- Build Bar Chart---------
 // Create the buildCharts function.
-function buildMetadata(ddates) {
+function buildCharts(ddates) {
 
 // Use d3.json to load and retrieve the unemployment_data.json file 
 d3.json("unemployment_data.json").then((data) => {
 
 // Create a variable that holds each index
 var metadata = data.metadata;
-
+var ue_rates = data.unemployment;
+var fed_rates = data.federal_ir;
+var cpi_rates = data.cpi;
+var gdp_rates = data.gdp;
+var ppi_rates = data.ppi;
+var inflation_rates = data.inflation_rate;
 // Create a variable that filters the metadata for the object with the desired date.
 var chartArray = metadata.filter(chartObj => chartObj.id == ddates);
 
 // Create a variable that holds the first sample in the array.
 var chartResult = chartArray[0];
 
-// 6. Create variables that hold the unemployment data.
-var ue_rates = chartResult.unemployment;
-var names = chartResult.names;
+// 6. Create variables that hold the chartResults data.
+var ddates = chartResult.metadata;
+
   
-//---------------- Bar Chart ------------------
+//---------------- Bar Charts ------------------
+//---------------------- Chart 1 Fed Fund and Inflation-----------
 // Create the yticks for the bar chart.  
-var yticks = ue_rates.map(ue_rates => `rates ${ue_rates}`);
+var yticks = ue_rates
 
     //Create the trace for the bar chart. 
     var barData = [{
-      x: metadata,
-      y: yticks,
-      text: yticks.map(row => names),
+      x: yticks,
+      y: fed_rates, inflation_rates,
+      text: yticks,
       type: "bar",
       orientation: "h"}
     ];
@@ -99,6 +106,62 @@ var yticks = ue_rates.map(ue_rates => `rates ${ue_rates}`);
     };
     // Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
+    
+
+    //------------------ Chart 2 CPI and PPI------------
+    // Create the yticks for the bar chart.  
+var yticks = ue_rates
+
+//Create the trace for the bar chart. 
+var barData = [{
+  x: yticks,
+  y: cpi_rates, ppi_rates,
+  text: yticks,
+  type: "bar2",
+  orientation: "h"}
+];
+
+// Create the layout for the bar chart. 
+var barLayout = {
+ title: "Impact on Unemployment Rates",
+ margin: {
+  l: 100,
+  r: 100,
+  t: 100,
+  b: 30
+  }
+};
+// Use Plotly to plot the data with the layout. 
+Plotly.newPlot("bar2", barData, barLayout);
+
+    //------------------ Chart 3 CPI and PPI--------------------
+    // Create the yticks for the bar chart.  
+    var yticks = ue_rates
+
+    //Create the trace for the bar chart. 
+    var barData = [{
+      x: yticks,
+      y: cpi_rates, ppi_rates,
+      text: yticks,
+      type: "bar3",
+      orientation: "h"}
+    ];
+    
+    // Create the layout for the bar chart. 
+    var barLayout = {
+     title: "Impact on Unemployment Rates",
+     margin: {
+      l: 100,
+      r: 100,
+      t: 100,
+      b: 30
+      }
+    };
+    // Use Plotly to plot the data with the layout. 
+    Plotly.newPlot("bar3", barData, barLayout);
+
+
+
   });
 
 }
