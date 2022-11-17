@@ -20,16 +20,23 @@ body {
 
  }
  #bar {
-   border-radius: 25px !important;
+   border-radius: 100px !important;
 
  }
+ #bar2 {
+  border-radius: 100px !important;
 
+}
+#bar3 {
+  border-radius: 100px !important;
+
+}
  #images, #chartbox1, #chartbox2, #chartbox3, #marginbox {
    padding: 4px;
    background-color: white;
    border: 1px solid #60797f;
-   border-radius: 10px !important;
-   margin-bottom: 15px;
+   border-radius: 50px !important;
+   margin-bottom: 50px;
  }
 
 
