@@ -158,6 +158,7 @@ var chartArray = metadata.filter(chartObj => chartObj.date == ddates);
 
 // Create a variable that holds the first sample in the array.
 var chartResult = chartArray[0];
+console.log(chartArray)
 
 // 6. Create variables that hold the chartResults data.
 var ue_rates = chartResult.unemployment;
@@ -165,24 +166,22 @@ var fed_rates = chartResult.federal_ir;
 var cpi_rates = chartResult.cpi;
 var gdp_rates = chartResult.gdp;
 var ppi_rates = chartResult.ppi;
-var inflation_rates = chartResult.inflation_rate;
+var inflation_rate = chartResult.inflation_rate;
 
   
 //---------------- Bar Charts ------------------
 //---------------------- Chart 1 Fed Fund and Inflation-----------
 // Create the yticks for the bar chart.  
-var y = [ue_rates, fed_rates, inflation_rates]
+var y = [ue_rates, fed_rates, inflation_rate]
 
 //Create the trace for the bar chart. 
 var barData = [{
   x: ['ue_rates', 'fed_rates', 'inflation_rates'],
-  y: [ue_rates, fed_rates, inflation_rates],
+  y: [ue_rates, fed_rates, inflation_rate],
   type: "bar",
   orientation: "v"},
-  console.log(fed_rates)
+  
 ];
-
-
 // Create the layout for the bar chart. 
 var barLayout = {
  title: "Unemployment vs Fed Fund and Inflation Rates",
@@ -197,7 +196,7 @@ var barLayout = {
 
 // Use Plotly to plot the data with the layout. 
  // call updatePlotly 
-Plotly.restyle("bar", "y", [y]);
+Plotly.restyle("bar", "y", [y], barLayout);
 
 
 
@@ -231,7 +230,7 @@ var barLayout = {
 
 // Use Plotly to plot the data with the layout. 
  // call updatePlotly 
-Plotly.restyle("bar2", "y", [y]);
+Plotly.restyle("bar2", "y", [y], barLayout);
 
 
 //------------------ Chart 3 GDP -------------------- 
@@ -260,9 +259,7 @@ var barLayout = {
 
 // Use Plotly to plot the data with the layout. 
  // call updatePlotly 
-Plotly.restyle("bar", "y", [y]);
-
-
+Plotly.restyle("bar3", "y", [y], barLayout);
 });
 
 }
