@@ -1,7 +1,7 @@
 # Multiple Indicies Affect on Unemployment Rate
 
 ## Obejective of this Analysis
-The objective of this anlysis is to examine the affect of multiple economic indicies on the unemployment rate in the US. The unemployment rate will be the dependent variable for this analysis whereas the following variables will serve as the independent variables; Gross Domestic Product (GDP), Producer Price Index (PPI), Consumer Price Index (CPI), Federal Fund Rate, and the National Interest Rate. The machine leaning technique this analysis will employ will consist of a linear regression to explore the relationship between the selected indicies and the dependent variable.   
+The objective of this analysis is to examine the affect of multiple economic indicies on the unemployment rate in the US. The unemployment rate will be the dependent variable for this analysis whereas the following variables will serve as the independent variables; Gross Domestic Product (GDP), Producer Price Index (PPI), Consumer Price Index (CPI), Federal Fund Rate, and the National Interest Rate. The machine leaning technique this analysis will employ will consist of a linear regression to explore the relationship between the selected indicies and the dependent variable.   
 
 ## Data Sources:
 For this analysis, we have 6 different CSV datasets. Each dataset represents a factor that we want to analyze in relation to the Unemployment Rate. This includes CPI, PPI, GDP, Inflation Rate, and the Federal Fund Rate.
